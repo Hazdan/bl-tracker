@@ -17,7 +17,7 @@ class BuscalibreDataMiner(GenericDataMiner):
 
 
     async def extract_data(self, data, *args, **kwargs):
-        await data.arender(timeout=2)
+        await data.arender(timeout=5)
         try:
             book_div = data.find('#producto', first=True)
             book = {}
